@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Camping{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+    <!-- ============================================================== -->
+    <!-- Start Page Content -->
+    <!-- ============================================================== -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title m-b-0">{{ camping.nomC }}</h5>
+                </div>
+                <table class="table">
+                    <thead>
+        <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ camping.id }}</td>
+        </tr>
+
+        <tr>
+            <th>Program</th>
+            <td>{{ camping.program }}</td>
+        </tr>
+        <tr>
+            <th>Date_fin</th>
+            <td>{{ camping.dateFin ? camping.dateFin|date('Y-m-d') : '' }}</td>
+        </tr>
+        <tr>
+            <th>Date_debut</th>
+            <td>{{ camping.dateDebut ? camping.dateDebut|date('Y-m-d') : '' }}</td>
+        </tr>
+        <tr>
+            <th>Destination</th>
+            <td>{{ camping.destination }}</td>
+        </tr>
+        <tr>
+            <th>Nbrplaces</th>
+            <td>{{ camping.nbrplaces }}</td>
+        </tr>
+        <tr>
+            <th>Nbrbus</th>
+            <td>{{ camping.nbrbus }}</td>
+        </tr>
+        <tr>
+            <th>Prix_c</th>
+            <td>{{ camping.prixC }}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('camping_affich') }}">back to list</a>
+
+
+{% endblock %}

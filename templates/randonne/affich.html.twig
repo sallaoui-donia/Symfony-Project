@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Randonne{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+    <!-- ============================================================== -->
+    <!-- Start Page Content -->
+    <!-- ============================================================== -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title m-b-0">{{ randonne.nomR }}</h5>
+                </div>
+                <table class="table">
+                    <thead>
+        <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ randonne.id }}</td>
+        </tr>
+
+        <tr>
+            <th>Program</th>
+            <td>{{ randonne.program }}</td>
+        </tr>
+        <tr>
+            <th>Date_r</th>
+            <td>{{ randonne.dateR ? randonne.dateR|date('Y-m-d') : '' }}</td>
+        </tr>
+        <tr>
+            <th>Prix_r</th>
+            <td>{{ randonne.prixR }}</td>
+        </tr>
+        <tr>
+            <th>Destination</th>
+            <td>{{ randonne.destination }}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('randonne_affich') }}">back to list</a>
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Inscription{% endblock %}
+
+{% block body %}
+
+
+    {{ include('inscription/_form.html.twig') }}
+
+
+    <a class="btn btn-primary"  href="{{ path('inscription_index') }}">Retour </a>
+{% endblock %}

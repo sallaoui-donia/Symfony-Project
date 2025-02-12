@@ -1,0 +1,44 @@
+{{ form_start(form) }}
+
+
+<div class="container-fluid">
+
+    <div class="card">
+        <div  class="card-body wizard-content">
+
+
+            <div  class="m-t-40">
+                {{ form_start(form) }}
+
+                <h3>Gérer votre Club</h3>
+                <div class="form-wrapper">
+                    <label for="">Camping :</label>
+                </div>
+                {{ form_widget(form.nom_c) }}
+
+                <div class="form-group">
+                    <div class="form-wrapper">
+                        <label for="">Activite </label>
+                    </div>
+                    <!--input type="text" class="form-control"-->
+                    {{ form_widget(form.activite_c) }}
+
+                    <div class="form-wrapper">
+                        <label for="">Adresse </label>
+                    </div>
+                    {{ form_widget(form.adresse_c) }}
+
+
+                <div class="form-wrapper">
+                    <label for="">Prix </label>
+                </div>
+                {{ form_widget(form.prix_c) }}
+
+
+
+                {{ form_widget(form) }}
+
+
+
+                <button class="btn btn-success">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}

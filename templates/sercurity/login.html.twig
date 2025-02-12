@@ -1,0 +1,60 @@
+
+ {% block stylesheets %}
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <meta name="viewport" content="width-device-width, initial-scale=1">
+    <title>Authentification</title>
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="{{ asset('../../system/fonts/material-icon/css/material-design-iconic-font.min.css') }}">
+    <!-- Main css -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('../../system/csslogin/style.css') }}" />
+ {% endblock %}
+
+
+    {% block body %}
+<div class="main">
+    <section class="sign-in">
+        <div class="container">
+            <div class="signin-content">
+                <div class="signin-image">
+                    <figure><img src="../../system/images/signin.jpg" alt="sing up image"></figure>
+                    <a href="inscription.php" class="signup-image-link">Créer compte</a>
+                </div>
+
+                <div class="signin-form">
+                    <h2 class="form-title">Se connecter</h2>
+
+        {% if error %}
+            <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+        {% endif %}
+                    <form  class="register-form" id="login-form" action="{{ path('security_login') }}" method="post" onSubmit="return verif();" required>
+                        <div class="form-group">
+
+                                <label for="email"><i class="zmdi zmdi-email"></i></label>
+                <input placeholder="Adresse email..." requied name="_username" value ="{{lastUsername}}" type="text" class="form-control">
+            </div>
+
+                            <div class="form-group">
+                                <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
+                                <input placeholder="Mode de passe..." requied name="_password" type="password" class="form-control">
+            </div>
+            <div class="form-group">
+                <div class="form-group form-button">
+                <button type="submit" class="form-submit">Connexion</button>
+    </form>
+                    <div class="social-login">
+                        <span class="social-label" href="{{ path('sercurity') }}">Ou connectez-vous avec</span>
+                        <ul class="socials">
+                            <li><a href="#"><i class="display-flex-center zmdi zmdi-facebook"></i></a></li>
+                            <li><a href="#"><i class="display-flex-center zmdi zmdi-twitter"></i></a></li>
+                            <li><a href="#"><i class="display-flex-center zmdi zmdi-google"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+        </body>
+    {% endblock %}
+

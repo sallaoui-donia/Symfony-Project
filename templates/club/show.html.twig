@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Club{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+    <!-- ============================================================== -->
+    <!-- Start Page Content -->
+    <!-- ============================================================== -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title m-b-0">{{ club.nomC }}</h5>
+                </div>
+                <table class="table">
+                    <thead>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ club.id }}</td>
+            </tr>
+
+            <tr>
+                <th>Activite_c</th>
+                <td>{{ club.activiteC }}</td>
+            </tr>
+            <tr>
+                <th>Adresse_c</th>
+                <td>{{ club.adresseC }}</td>
+            </tr>
+            <tr>
+                <th>Prix_c</th>
+                <td>{{ club.prixC }}</td>
+            </tr>
+            <tr>
+                <th>Les inscriptions </th>
+
+
+                <td>{% for inscrip in club.inscriptions %}
+
+                {{inscrip.nomEnfant}}
+                {{inscrip.prenomEnfant}}
+                 {{inscrip.nomParent}}
+                 {{inscrip.telephoneParent}}
+
+
+
+
+                {% endfor %}</td>
+
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('club_index') }}">back to list</a>
+
+    <a class="btn btn-info" href="{{ path('club_edit', {'id': club.id}) }}">edit</a>
+
+    {{ include('club/_delete_form.html.twig') }}
+{% endblock %}

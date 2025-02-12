@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+
+
+<div class="container-fluid"  style="background-image:linear-gradient(#eeeeee 20%,transparent),
+        url('{{ asset('../../assets/images/img1.jpg') }}');background-repeat:no-repeat;background-size:100% 100%;background-repeat:no-repeat;background-size:100% 100%;height:484px">
+
+        <!-- Column -->
+        <div class="row" >
+
+            <div class="col-md-6">
+                <div class="card card-hover">
+                <div class="box bg-cyan text-center">
+                    <a href="{{ path('event_affich') }}">
+                    <h1 class="font-light text-white"><i class="mdi mdi-calendar-multiple"></i></h1>
+                        <h6 class="text-white">Event</h6></a>
+                </div>
+            </div>
+        </div>
+        <!-- Column -->
+        <div class="col-md-6 col-lg-3">
+            <div class="card card-hover">
+                <div class="box bg-success text-center">
+                    <a href="{{ path('camping_affich') }}">
+                    <h1 class="font-light text-white"><i class="mdi mdi-chart-bubble"></i></h1>
+                        <h6 class="text-white">Camping</h6></a>
+                </div>
+            </div>
+        </div>
+        <!-- Column -->
+        <div class="col-md-6 col-lg-3">
+            <div class="card card-hover" >
+                <div class="box bg-warning text-center">
+                    <a href="{{ path('randonne_affich') }}">
+                    <h1 class="font-light text-white"><i class="mdi mdi-bus"></i></h1>
+                    <h6 class="text-white" >Randonnée</h6>
+                   </a>
+
+                </div>
+            </div>
+        </div>
+        <!-- Column -->
+        <div class="col-md-6 col-lg-3">
+            <div class="card card-hover">
+                <div class="box bg-danger text-center">
+                    <a href="{{ path('formation_affich') }}">
+                    <h1 class="font-light text-white"><i class="mdi mdi-school"></i></h1>
+                        <h6 class="text-white">Formation</h6></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+            <div class="card card-hover">
+                <div class="box bg-dark text-center">
+                    <a href="{{ path('club_affich') }}">
+                    <h1 class="font-light text-white"><i class="mdi mdi-dribbble"></i></h1>
+                        <h6 class="text-white">Club</h6></a>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+{% endblock %}

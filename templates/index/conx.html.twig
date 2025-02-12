@@ -1,0 +1,26 @@
+{% extends 'index/index.html.twig' %}
+{% block body %}
+
+<div class="herder_f"><a href="{{ path('index') }}"  style="text-decoration:none; color: #0066FF;">Acceuil<img src="../../system/images/next.png" width="47" height="10"></a></div>
+<div><img src="../../system/images/connecter.png" ></div>
+
+<div class="from_inscript">
+    <h3 style="font-size:36px; text-align:center;"><span>Quel genre d'utilisateur</span> <span style="color:#007bff ; font-size:36px; text-align:center;"> êtes-vous ? </span></h3>
+
+    <div class="con_etud">
+        <img src="../../system/images/etud1.png" width="390" height="400">
+        <a  href="{{ path('security_login') }}" class="bt">Parent</a>
+        <h4><a href="{{ path('sercurity') }}"  style="text-decoration:none;color:#007bff; margin:10px;">Créer un compte</a></h4>
+    </div>
+    <div class="con_org">
+        <img src="../../system/images/org.png" width="390" height="400">
+        <a  href="{{ path('security_login') }}" class="bt">Gérant</a>
+        <h4><a href="{{ path('sercurity') }}"  style="text-decoration:none;color:#007bff;margin:10px;">Créer un compte</a></h4>
+    </div>
+</div>
+
+</form>
+</div>
+<div id="pied">
+</div>
+{% endblock %}

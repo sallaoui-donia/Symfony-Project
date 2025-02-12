@@ -1,0 +1,39 @@
+/* CSS Document */
+#menu ul{ list-style:none; float:right;
+}
+ul {
+	
+	padding:0;
+display:flex;}
+
+ul li { list-style:none;
+padding:10px 20px;
+}
+ul li a 
+{ text-decoration:none;
+
+font-size:1em;
+color:#fff;
+position:relative;
+padding:5px;
+font-weight:bold;
+}
+
+ul li a:before
+{ content:'';
+width:0;
+height:5px;
+background:#00bcd4;
+position:absolute;
+top:100%;
+left:0;
+transition:.5s;
+}
+ul li:hover a:before{
+	width:50%;
+	transform:translateX(100%);
+}
+
+
+ul li a:hover {
+	color:#00bcd4;}

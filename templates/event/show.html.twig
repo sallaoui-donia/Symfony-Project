@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Event{% endblock %}
+
+{% block body %}
+
+<div class="container-fluid">
+    <!-- ============================================================== -->
+    <!-- Start Page Content -->
+    <!-- ============================================================== -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title m-b-0">{{ event.nomE }}</h5>
+                </div>
+                <table class="table">
+                    <thead>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ event.id }}</td>
+            </tr>
+
+            <tr>
+                <th>Date_e</th>
+                <td>{{ event.dateE ? event.dateE|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Type_e</th>
+                <td>{{ event.typeE }}</td>
+            </tr>
+            <tr>
+                <th>Adresse_e</th>
+                <td>{{ event.adresseE }}</td>
+            </tr>
+            <tr>
+                <th>Prix_e</th>
+                <td>{{ event.prixE }}</td>
+            </tr>
+            <tr>
+                <th>Les inscriptions </th>
+
+
+                <td>{% for inscrip in event.inscriptions %}
+
+                        {{inscrip.nomEnfant}}
+                        {{inscrip.prenomEnfant}}
+                        {{inscrip.nomParent}}
+                        {{inscrip.telephoneParent}}
+
+
+
+
+                    {% endfor %}</td>
+
+            </tr>
+        </tbody>
+    </table>
+
+
+
+    <a href="{{ path('event_index') }}">back to list</a>
+
+    <a class="btn btn-info" href="{{ path('event_edit', {'id': event.id}) }}">edit</a>
+
+    {{ include('event/_delete_form.html.twig') }}
+{% endblock %}

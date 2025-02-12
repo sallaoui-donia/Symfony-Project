@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('template/css/flaticon.css') }}" >
+            <link rel="stylesheet" href="{{ asset('template/css/themify-icons.css') }}" />
+            <link rel="stylesheet" href="{{ asset('template/vendors/owl-carousel/owl.carousel.min.css') }}" />
+            <link rel="stylesheet" href="{{ asset('template/vendors/nice-select/css/nice-select.css') }}" />
+
+            <link rel="stylesheet" href="{{ asset('template/css/style.css') }} " />
+
+
+
+            <link rel="stylesheet" href="{{ asset('template/css/bootstrap.css') }}">
+
+
+            <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }} ">
+            <link rel="stylesheet" href="{{ asset('theme/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css') }}" >
+            <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/images/favicon.png') }}">
+            <link href="{{ asset('assets/libs/flot/css/float-chart.css') }}" rel="stylesheet">
+            <link href="{{ asset('dist/css/style.min.css') }}" rel="stylesheet">
+            <link rel="stylesheet" href="{{ asset('theme/css/style.css') }}">
+
+
+
+
+
+
+
+
+
+
+        {% endblock %}
+    </head>
+    <body>
+    {{ include('inc/navbar.html.twig')}}
+
+        {% block body %}
+        {% endblock %}
+        {% block javascripts %}
+            <script src="{{ asset('template/js/popper.js  ') }}"                ></script>
+            <script src="{{ asset('template/js/bootstrap.min.js') }}"></script>
+            <script src="{{ asset('template/vendors/nice-select/js/jquery.nice-select.min.js') }}"></script>
+            <script src="{{ asset('template/vendors/owl-carousel/owl.carousel.min.js') }}"></script>
+            <script src="{{ asset('template/js/owl-carousel-thumb.min.js') }}"></script>
+            <script src="{{ asset('template/js/jquery.ajaxchimp.min.js') }}"></script>
+            <script src="{{ asset('template/js/mail-script.js') }}"></script>
+            <!--gmaps Js-->
+            <script src="{{ asset('template/https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE') }}"></script>
+            <script src="{{ asset('template/js/gmaps.min.js') }}"></script>
+            <script src="{{ asset('template/js/theme.js') }}"></script>
+
+
+
+                <script src="{{ asset('assets/libs/jquery/dist/jquery.min.js') }}" ></script>
+                <script src="{{ asset('assets/libs/popper.js/dist/umd/popper.min.js') }}"></script>
+                <script src="{{ asset('assets/libs/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+                <script src="{{ asset('assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js') }}"></script>
+                <script src="{{ asset('assets/extra-libs/sparkline/sparkline.js') }}"></script>
+                <script src="{{ asset('dist/js/waves.js') }}"></script>
+                <script src="{{ asset('dist/js/sidebarmenu.js') }}"></script>
+                <script src="{{ asset('dist/js/custom.min.js') }}"></script>
+                <script src="{{ asset('assets/libs/flot/excanvas.js') }}"></script>
+                <script src="{{ asset('assets/libs/flot/jquery.flot.js') }}"></script>
+                <script src="{{ asset('assets/libs/flot/jquery.flot.pie.js') }}"></script>
+                <script src="{{ asset('assets/libs/flot/jquery.flot.time.js') }}"></script>
+                <script src="{{ asset('assets/libs/flot/jquery.flot.stack.js') }}"></script>
+                <script src="{{ asset('assets/libs/flot/jquery.flot.crosshair.js') }}"></script>
+                <script src="{{ asset('assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js') }}"></script>
+                <script src="{{ asset('dist/js/pages/chart/chart-page-init.js') }}"></script>
+
+
+            <script src="{{ asset('assets/extra-libs/DataTables/datatables.min.js') }}"></script>
+            <script src="{{ asset('assets/extra-libs/multicheck/datatable-checkbox-init.js') }}"></script>
+            <script src="{{ asset('assets/extra-libs/multicheck/jquery.multicheck.js') }}"></script>
+
+
+            <script src="{{ path('club_index') }}"></script>
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    $('#zero_config').DataTable();})
+
+            </script>
+
+        {% endblock %}
+
+    </body>
+
+</html>

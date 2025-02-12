@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+{% block title %}New Club{% endblock %}
+
+{% block body %}
+
+
+    {{ include('club/_form.html.twig') }}
+
+    <a class="btn btn-primary"  href="{{ path('club_index') }}">Retour</a>
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+
+<div class="container-fluid">
+
+    <div class="card" >
+        <div class="card-body">
+            <h5 class="card-title">Basic Datatable</h5>
+            <div class="table-responsive">
+                <table id="zero_config" class="table table-striped table-bordered">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nom_c</th>
+            <th>Program</th>
+            <th>Date_fin</th>
+            <th>Date_debut</th>
+            <th>Destination</th>
+            <th>Nbrplaces</th>
+            <th>Nbrbus</th>
+            <th>Prix_c</th>
+            <th>actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for camping in campings %}
+            <tr>
+                <td>{{ camping.id }}</td>
+                <td>{{ camping.nomC }}</td>
+                <td>{{ camping.program }}</td>
+                <td>{{ camping.dateFin ? camping.dateFin|date('Y-m-d') : '' }}</td>
+                <td>{{ camping.dateDebut ? camping.dateDebut|date('Y-m-d') : '' }}</td>
+                <td>{{ camping.destination }}</td>
+                <td>{{ camping.nbrplaces }}</td>
+                <td>{{ camping.nbrbus }}</td>
+                <td>{{ camping.prixC }}</td>
+                <td>
+                    <a class="btn btn-primary" href="{{ path('camping_aff', {'id': camping.id}) }}">show</a>
+
+
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="10">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% if is_granted('ROLE_EDITOR') %}
+    <a href="{{ path('camping_new') }}">Create new</a>
+    {% endif %}
+{% endblock %}

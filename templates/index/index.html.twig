@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Kid'sClub{% endblock %}</title>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('template/css/flaticon.css') }}" >
+        <link rel="stylesheet" href="{{ asset('template/css/themify-icons.css') }}" />
+        <link rel="stylesheet" href="{{ asset('template/vendors/owl-carousel/owl.carousel.min.css') }}" />
+        <link rel="stylesheet" href="{{ asset('template/vendors/nice-select/css/nice-select.css') }}" />
+
+        <link rel="stylesheet" href="{{ asset('template/css/style.css') }} " />
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/images/favicon.png') }}">
+
+
+        <link rel="stylesheet" type="text/css" href="{{ asset('system/css/style1.css ') }}" />
+
+
+        <link rel="stylesheet" type="text/css" href="{{ asset('system/css/bt.css ') }}" />
+
+        <link rel="stylesheet" href="{{ asset('template/css/bootstrap.css') }}">
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {% endblock %}
+</head>
+
+{% block body %}
+<div>
+<!--================ Start Header Menu Area =================-->
+<header class="header_area">
+    <div class="main_menu">
+        <div class="search_input" id="search_input_box">
+            <div class="container">
+                <form class="d-flex justify-content-between" method="" action="">
+                    <input
+                            type="text"
+                            class="form-control"
+                            id="search_input"
+                            placeholder="Search Here"
+                    />
+                    <button type="submit" class="btn"></button>
+                    <span
+                            class="ti-close"
+                            id="close_search"
+                            title="Close Search"
+                    ></span>
+                </form>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <a class="navbar-brand logo_h" href="{{ path('index') }}"></a>
+                <img src="../../assets/images/logo1.png" alt="homepage" class="light-logo" />
+                <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                >
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div
+                        class="collapse navbar-collapse offset"
+                        id="navbarSupportedContent"
+                >
+                    <ul style="font-family:orbitron;" class="nav navbar-nav menu_nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{{ path('index') }}">Acceuil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('security_login') }}">Nos clubs</a>
+                        </li>
+
+                            <ul class="dropdown-menu">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ path('index') }}">A propos</a>
+                                </li>
+
+
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{ path('security_login') }}" class="nav-link search" id="search">
+                                <i class="ti-search"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+<!--================ End Header Menu Area =================-->
+
+<!--================ Start Home Banner Area =================-->
+<section class="home_banner_area">
+    <div class="banner_inner">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="banner_content text-center">
+                        <p >
+                            Bienvenue sur notre site
+                        </p>
+                        <h2  class=" mt-4 mb-5">
+                            Apportez une vie amusante à vos enfants
+                        </h2>
+                        <div>
+                            <a href="{{ path('sercurity') }}"  class="primary-btn2 mb-3 mb-sm-0">S'inscrire</a>
+                            <a href="{{ path('security_login') }}" class="primary-btn ml-sm-3 ml-0">Se connecter</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--================ End Home Banner Area =================-->
+
+<!--================ Start Feature Area =================-->
+<section class="feature_area section_gap_top" style="text-align:center;">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="single_feature">
+                    <img src="../../assets/images/f1.png" alt="homepage" class="light-logo" />
+                    <div class="desc">
+                        <h4 class="mt-3 mb-2">Jeux d'intérieur</h4>
+                        <p>
+                            une activité d'ordre psychique ou bien physique pensée pour divertir et improductive à court terme.
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="single_feature">
+                    <img src="../../assets/images/f2.png" alt="homepage" class="light-logo" />
+                    <div class="desc">
+                        <h4 class="mt-3 mb-2">Jeu et événement en plein air</h4>
+                        <p>
+                            activités physiques ou intellectuelles, non imposées et gratuites.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="single_feature">
+                    <img src="../../assets/images/f3.png" alt="homepage" class="light-logo" />
+                    <div class="desc">
+                        <h4 class="mt-3 mb-2">Camping pour les enfants</h4>
+                        <p>
+                            une activité touristique qui consiste à séjourner au même endroit sous une tente.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section></div>
+
+<!--================ End Feature Area =================-->
+<
+
+
+<div align="center"><img src="../../system/images/pp.png"></div>
+
+<div class="pp2" style="background-image:url({{asset('../../system/images/img_1.jpg')}}); background-repeat:no-repeat; background-size: cover;"></div>
+
+
+<div class="pp">
+    <h3 style="font-size:25px; text-align:center; margin-top:100px;font-family: Jazz LET, fantasy "><span>DANSE</span><br></h3> <p class="p" style=" text-align:center;font-size:20px;">L’éveil et l’initiation à la danse développent chez l’enfant une sensibilité artistique, l'apprentissage psychomoteur en même temps que le développement de l'imaginaire. Il permet à la fois d’extérioriser l’énergie du corps et d’acquérir concentration et détente.Il s'agit surtout pour les enfants d'être bien dans leurs corps… et leurs tutus !</p>
+</div>
+
+
+
+
+<div class="pp" style="background-image:url({{asset('../../system/images/img_4.jpg')}}); background-repeat:no-repeat; background-size: cover;"></div>
+
+<div class="pp">
+    <h3 style="font-size:25px; text-align:center; margin-top:100px;font-family: Jazz LET, fantasy "><span>EVEIL THEATRE</span><br></h3> <p class="p" style=" text-align:center;font-size:20px;">Dans un esprit ludique d’expression corporelle, les enfants vont travailler leur respiration, leur voix (chantée et parlée), leur élocution, le travail sur scène, l’improvisation, l’expression de leurs émotions, l’utilisation de l’espace et la relaxation. Ils vont développer l’affirmation de soi, l’écoute, la mémoire, le contrôle de la timidité et l’imagination</p>
+</div>
+<div class="pp2" style="background-image:url({{asset('../../system/images/img_5.jpg')}}); background-repeat:no-repeat; background-size: cover;"></div>
+
+<div class="pp">
+    <h3 style="font-size:25px; text-align:center; margin-top:100px;font-family: Jazz LET, fantasy "><span>EVEIL KARATE</span><br></h3> <p class="p" style=" text-align:center;font-size:20px;">L'Eveil karaté pour enfants est basé sur des apprentissages moteurs et le développement harmonieux du corps. Dans un cadre ludique,. Cette discipline favorise le développement de leur concentration, la maîtrise de soi, la confiance en soi, les relations sociales mais aussi bien sûr le plaisir de découvrir, d’apprendre et de grandir en s’amusant !</p>
+</div>
+</div>
+
+
+
+<div id="apropos">
+    <div align="center"><img src="../../system/images/titre00.png"></div>
+
+
+    <div class="event">
+        <div class="day"><img src="../../assets/images/logo1.png"></div>
+
+
+
+
+        <div class="event-content">
+
+            <h1 class="titr" style="font-family: fantasy;color: #ffc107;">Apportez une vie amusante à vos enfants</h1>
+            <p class="texte"style="color: #495057; font-size:20px;  font-family: emoji;">Le Kids Club offre un large choix d’activités extra scolaires ludiques et pédagogiques animées par des profs expérimentés et diplômés. Qu’elles soient sportives, artistiques, ou linguistique, nos activités s’adaptent à tous les âges et tous les niveaux. Nouveau, découvrez nos formules afterschool pour accueillir les enfants après l'école.</p>
+        </div>
+    </div></div></div></div>
+
+
+<footer class="footer-area section_gap">
+
+        <div class="row footer-bottom d-flex justify-content-between">
+
+            <div class="col-lg-4 col-sm-12 footer-social">
+                <a href="#"><i class="ti-facebook"></i></a>
+                <a href="#"><i class="ti-twitter"></i></a>
+                <a href="#"><i class="ti-dribbble"></i></a>
+                <a href="#"><i class="ti-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+{% endblock %}
+{% block javascripts %}
+    <script src="{{ asset('template/js/jquery-3.2.1.min.js') }}"  ></script>
+
+
+
+
+
+
+
+    <script src="{{ asset('template/js/popper.js  ') }}"                ></script>
+    <script src="{{ asset('template/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('template/vendors/nice-select/js/jquery.nice-select.min.js') }}"></script>
+    <script src="{{ asset('template/vendors/owl-carousel/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('template/js/owl-carousel-thumb.min.js') }}"></script>
+    <script src="{{ asset('template/js/jquery.ajaxchimp.min.js') }}"></script>
+    <script src="{{ asset('template/js/mail-script.js') }}"></script>
+    <!--gmaps Js-->
+    <script src="{{ asset('template/https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE') }}"></script>
+    <script src="{{ asset('template/js/gmaps.min.js') }}"></script>
+    <script src="{{ asset('template/js/theme.js') }}"></script>
+{% endblock %}
+
+</body>
+
+</html>

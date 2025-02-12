@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Event index{% endblock %}
+
+{% block body %}
+
+<div class="container-fluid">
+
+    <div class="card" >
+        <div class="card-body">
+            <h5 class="card-title">Basic Datatable</h5>
+            <div class="table-responsive">
+                <table id="zero_config" class="table table-striped table-bordered">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nom_e</th>
+            <th>Date_e</th>
+            <th>Type_e</th>
+            <th>Adresse_e</th>
+            <th>Prix_e</th>
+            <th>actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for event in events %}
+            <tr>
+
+
+                <td>{{ event.id }}</td>
+                <td>{{ event.nomE }}</td>
+                <td>{{ event.dateE ? event.dateE|date('Y-m-d') : '' }}</td>
+                <td>{{ event.typeE }}</td>
+                <td>{{ event.adresseE }}</td>
+                <td>{{ event.prixE }}</td>
+                <td>
+
+                    <a class="btn btn-primary" href="{{ path('event_aff', {'id': event.id}) }}">Show</a>
+                    <a class="btn btn-primary" href="{{ path('inscription_new', {'id': event.id}) }}">Participer</a>
+
+                    {% if is_granted('ROLE_ADMIN') %}
+                        <a class="btn btn-primary" href="{{ path('event_edit', {'id': event.id}) }}"><i class=" fas fa-edit"></i></a>
+                    {% endif %}
+
+
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% if is_granted('ROLE_EDITOR') %}
+    <a href="{{ path('event_new') }}">Create new</a>
+    {% endif %}
+            </div>
+        </div>
+{% endblock %}

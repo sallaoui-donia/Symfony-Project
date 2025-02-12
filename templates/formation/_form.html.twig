@@ -1,0 +1,57 @@
+
+<div class="container-fluid">
+
+    <div class="card">
+        <div  class="card-body wizard-content">
+
+
+            <div  class="m-t-40">
+                {{ form_start(form) }}
+
+                <h3>Gérer votre camping</h3>
+                <div class="form-wrapper">
+                    <label for="">Formation :</label>
+                </div>
+                {{ form_widget(form.nom_f) }}
+
+                <div class="form-group">
+                    <div class="form-wrapper">
+                        <label for=""> Pour les Niveaux   :</label>
+                    </div>
+                    <!--input type="text" class="form-control"-->
+                    {{ form_widget(form.niveau) }}
+                    <div class="form-wrapper">
+                        <label for="">Date de Debut      </label>
+                    </div>
+                    {{ form_widget(form.date_debut) }}
+
+                    <div class="form-wrapper">
+                        <label for="">Date de fin       </label>
+                    </div>
+                    {{ form_widget(form.date_fin) }}
+
+
+                    <div class="form-wrapper">
+                        <label for="">Objectif :</label>
+                    </div>
+                    {{ form_widget(form.objectif) }}
+
+                <div class="form-wrapper">
+                    <label for="">Prix </label>
+                </div>
+                {{ form_widget(form.prix_f) }}
+
+                {{ form_widget(form) }}
+
+
+            </div>
+
+            <div class="border-top">
+                <div class="card-body">
+                    <button class="btn btn-success">{{ button_label|default('Save') }}</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+{{ form_end(form) }}

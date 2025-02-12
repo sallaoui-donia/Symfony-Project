@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Randonne{% endblock %}
+
+{% block body %}
+    <h1>Edit Randonne</h1>
+
+    {{ include('randonne/_form.html.twig', {'button_label': 'Update'}) }}
+
+
+
+    <a href="{{ path('randonne_index') }}">back to list</a>
+
+    {{ include('randonne/_delete_form.html.twig') }}
+{% endblock %}

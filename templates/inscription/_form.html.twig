@@ -1,0 +1,55 @@
+
+
+<div class="container-fluid">
+
+    <div class="card">
+        <div  class="card-body wizard-content">
+
+
+            <div  class="m-t-40">
+                {{ form_start(form) }}
+
+                <h3>Gérer votre inscription</h3>
+                <div class="form-wrapper">
+                    <label for="">Nom d'enfant :</label>
+                </div>
+                {{ form_widget(form.nom_enfant) }}
+
+                <div class="form-group">
+                    <div class="form-wrapper">
+                        <label for="">Prénom d'enfant</label>
+                    </div>
+                    <!--input type="text" class="form-control"-->
+                    {{ form_widget(form.prenom_enfant) }}
+
+                    <div class="form-wrapper">
+                        <label for="">Nom de parent       </label>
+                    </div>
+                    {{ form_widget(form.nom_parent) }}
+
+
+                    <div class="form-wrapper">
+                        <label for="">Telephone :</label>
+                    </div>
+                    {{ form_widget(form.telephone_parent) }}
+
+                    <div class="form-wrapper">
+                        <label for="">Date de Naissance </label>
+                    </div>
+
+                    {{ form_widget(form.date_naissance) }}
+
+                    {{ form_widget(form) }}
+
+
+                </div>
+
+                <div class="border-top">
+                    <div class="card-body">
+                        <button class="btn btn-success">{{ button_label|default('Save') }}</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+{{ form_end(form) }}
